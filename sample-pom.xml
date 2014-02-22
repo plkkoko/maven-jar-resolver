@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>Test</groupId>
+	<artifactId>Test</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.sca.maven</groupId>
+				<artifactId>maven-jar-resolver</artifactId>
+				<version>1.0.0</version>
+ 				<executions>
+					<execution>
+						<goals>
+							<goal>resolve-jars</goal>
+						</goals>
+						<configuration>
+						<localRepository>C:\Users\SIRI\.m2\repository</localRepository>
+						<remoteRepository>http://repo1.maven.org/maven2/</remoteRepository>
+							<resources>
+								<resource>
+									<directory>C:\\maven\\lib</directory>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+		 
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>org.sca.maven</groupId>
+			<artifactId>maven-plugin-resolver</artifactId>
+			<version>1.0.0</version>
+			<type>maven-plugin</type>
+		</dependency>
+	</dependencies>
+</project>
